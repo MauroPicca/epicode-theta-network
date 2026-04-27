@@ -1,0 +1,37 @@
+==============================
+THETA NETWORK ARCHITECTURE
+==============================
+
+INTERNET
+   |
+   |
+[ FIREWALL ]
+   |
+   |---------------------- DMZ ----------------------
+   |                      |
+   |               [ WEB SERVER ]
+   |            (Metasploitable - DVWA)
+   |
+   |
+[ ROUTER ]
+   |
+-----------------------------------------------------
+|       |       |       |       |       |
+[S1]   [S2]   [S3]   [S4]   [S5]   [S6]
+ |       |       |       |       |       |
+20 PC   20 PC   20 PC   20 PC   20 PC   20 PC
+
+   |
+[ NAS ] (collegato al piano terra)
+
+   |
+[ IDS / IPS ] (monitoraggio traffico interno)
+
+==============================
+NOTE:
+- Ogni piano ha uno switch dedicato
+- Il router collega tutta la rete interna
+- Il firewall protegge la rete aziendale
+- Il web server è isolato in DMZ
+- IDS/IPS monitorano il traffico
+==============================
